@@ -1,0 +1,9 @@
+@import "../a-settings/all";
+
+*{
+  --font-size: calc((var(--pixels) / 16) * 1rem);
+  font-size: var(--font-size);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}

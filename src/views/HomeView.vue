@@ -51,7 +51,7 @@ export default defineComponent({
 });
 </script>
 
-<style>
+<style lang="scss">
 .home{
   width: 100%;
   height: 450px;

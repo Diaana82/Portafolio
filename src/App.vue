@@ -27,12 +27,17 @@
   </footer>
 </template>
 
+<script>
+import { Icon } from '@iconify/vue';
+
+</script>
+
 <style lang="scss">
 *{
   margin: auto;
 }
 </style>
-<style>
+<style lang="scss">
 .nav-bar{
   background-color: blueviolet;
 }
