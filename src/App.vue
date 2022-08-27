@@ -1,47 +1,97 @@
 <template>
-  <nav class="nav-bar">
-    <div>
-      <img src="" alt="logo">
-    </div>
-
-    <div class="nav-bar__right">
-      <a href="">Say hello</a>
-    </div>
-  </nav>
-  <router-view/>
-  <footer>
-    <div>
-      <img src="" alt="logo">
-    </div>
-  <div class="main-footer__phrase">
-    <p>"If you think good architecture is expensive, try bad architecture."</p>
+  <div :class="getTheme()">
+    <nav class="nav-bar">
+      <div>
+        <img class="nav-img" src="./assets/media/icono.png" alt="logo" />
+      </div>
+      <div class="nav-txt">
+        <a href="">Say hello</a>
+      </div>
+    </nav>
+    <router-view />
+    <footer>
+      <div>
+        <img class="footer-img" src="./assets/media/icono.png" alt="logo" />
+      </div>
+      <div class="main-footer__phrase">
+        <p class="text-footer">"If you think good architecture is expensive,
+        try bad architecture."</p>
+      </div>
+      <div class="main-footer__social-media">
+        <a href="https://www.linkedin.com/in/diana-cristina-pati%C3%B1o-ramirez-172340243/">
+          <iconify-icon icon="logos:linkedin-icon" alt="Linkedin">|</iconify-icon>
+        </a>
+        <a href="https://github.com/Diaana82">
+          <iconify-icon icon="icon-park:github" alt="GitHub">|</iconify-icon>
+        </a>
+        <a href="tel:+57 3135374647">
+          <iconify-icon icon="logos:whatsapp-icon">|</iconify-icon>
+        </a>
+        <a href="https://www.instagram.com/dianacristina_pati/">
+          <iconify-icon icon="icon-park:github" alt="GitHub">|</iconify-icon>
+        </a>
+      </div>
+      <JcSwich id="page-style" v-model="isDarkMode" label="Go to dark" labelOff="Go to light" />
+      <div class="grupo-2">
+        <small>&copy; 2022 <b> Diaana82</b></small>
+      </div>
+    </footer>
   </div>
-
-  <div class="main-footer__social-media">
-    <a href="#"><Icon icon="el:github-text" /> github</a>
-    <a href="#"><Icon icon="eva:linkedin-fill" /> linkedin</a>
-  </div>
-  <div class="grupo-2">
-    <small>&copy; 2022 <b> Diaana82</b></small>
-  </div>
-  </footer>
 </template>
 
-<script>
-import { Icon } from '@iconify/vue';
+<script setup lang="ts">
+import { ref } from 'vue';
 
+const isDarkMode = ref(false);
+
+function getTheme() {
+  return isDarkMode.value ? 'theme--dark' : 'theme--light';
+}
 </script>
 
 <style lang="scss">
-*{
-  margin: auto;
+@use "./assets/styles/main.scss";
+// navbar
+.nav-bar {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: var(--color-background-2);
+  z-index: 3;
+  width: 100%;
 }
-</style>
-<style lang="scss">
-.nav-bar{
-  background-color: blueviolet;
+.nav-img {
+  width: 30px;
+  height: 30px;
+  object-position: left;
+  align-items: flex-start;
 }
-footer{
-  background-color: crimson;
+.nav-txt a {
+  object-position: right;
+  align-items: flex-start;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+//Footer
+footer {
+  background-color: var(--color-background-1);
+  justify-content: center;
+  text-align: center;
+  color: var(--color-text-2);
+  padding: 3%;
+}
+.footer-img{
+  width: 10%;
+  height: 10%;
+  margin: 0%;
+}
+.text-footer{
+  padding: 3%;
+}
+.main-footer__social-media {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 3%;
 }
 </style>
