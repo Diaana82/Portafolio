@@ -15,21 +15,29 @@
       </div>
       <div class="main-footer__phrase">
         <p class="text-footer">"If you think good architecture is expensive,
-        try bad architecture."</p>
+        try bad architecture".<br/>Hecho por mi.</p>
       </div>
       <div class="main-footer__social-media">
-        <a href="https://www.linkedin.com/in/diana-cristina-pati%C3%B1o-ramirez-172340243/">
-          <iconify-icon icon="logos:linkedin-icon" alt="Linkedin">|</iconify-icon>
-        </a>
-        <a href="https://github.com/Diaana82">
-          <iconify-icon icon="icon-park:github" alt="GitHub">|</iconify-icon>
-        </a>
-        <a href="tel:+57 3135374647">
-          <iconify-icon icon="logos:whatsapp-icon">|</iconify-icon>
-        </a>
-        <a href="https://www.instagram.com/dianacristina_pati/">
-          <iconify-icon icon="icon-park:github" alt="GitHub">|</iconify-icon>
-        </a>
+        <div class="linkedin">
+          <a href="https://www.linkedin.com/in/diana-cristina-pati%C3%B1o-ramirez-172340243/">
+          <iconify-icon style="color:#fff" icon="akar-icons:linkedin-v1-fill">|</iconify-icon>
+          </a>
+        </div>
+        <div class="github">
+          <a href="https://github.com/Diaana82">
+          <iconify-icon style="color:#fff" icon="ant-design:github-outlined">|</iconify-icon>
+          </a>
+        </div>
+        <div class="whatsapp">
+          <a href="tel:+57 3135374647">
+          <iconify-icon style="color:#fff" icon="simple-icons:whatsapp">|</iconify-icon>
+          </a>
+        </div>
+        <div class="instagram">
+          <a style="color:#fff" href="https://www.instagram.com/dianacristina_pati/">
+          <iconify-icon icon="ri:instagram-fill">.</iconify-icon>
+          </a>
+        </div>
       </div>
       <JcSwich id="page-style" v-model="isDarkMode" label="Go to dark" labelOff="Go to light" />
       <div class="grupo-2">
@@ -93,5 +101,17 @@ footer {
   display: flex;
   justify-content: space-evenly;
   padding: 3%;
+}
+.linkedin{
+  font-size: 30px;
+}
+.github{
+  font-size: 30px;
+}
+.whatsapp{
+  font-size: 30px;
+}
+.instagram{
+  font-size: 30px;
 }
 </style>
