@@ -15,6 +15,7 @@
           </p>
           </div>
     </section>
+    <ExperienceComp />
     <div>
       <section class="project">
               <div class="item-1">
@@ -45,9 +46,11 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import ExperienceComp from '@/components/experienceComp.vue';
 
 export default defineComponent({
   name: 'HomeView',
+  components: { ExperienceComp },
 });
 </script>
 
@@ -90,7 +93,7 @@ export default defineComponent({
 }
 //project
 .project{
-  background-color: var(--color-background-2);
+  background-color: var(--color-background-1);
   padding: 5%;
 }
 .item-1{
