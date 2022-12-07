@@ -1,8 +1,7 @@
 <template>
   <header class="home">
       <section class="txt-header">
-        <h1>Hi, Mi name is Diana!</h1>
-        <h3>I'm FrontEnd developer</h3>
+        <h1>Hi,I'm Diana!,<br/>FrontEnd developer</h1>
       </section>
     </header>
     <section class="container-introduction">
@@ -67,9 +66,8 @@ export default defineComponent({
 }
 .txt-header{
   position: absolute;
-  text-align: center;
   color: #fff;
-
+  text-align: center;
   left: 20%;
   right: 20%;
   top: 50%;
@@ -130,7 +128,7 @@ export default defineComponent({
   }
 }
 .tecno{
-  background-color: var(--color-background-1);
+  background-color: var(--color-background-2);
   text-align: center;
   color: var(--color-text-2);
   padding: 5%;
@@ -141,7 +139,7 @@ export default defineComponent({
   padding: 6%;
 }
 .button-container{
-  background-color: var(--color-background-2);
+  background-color: var(--color-background-1);
   text-align: center;
   padding: 10%;
 }

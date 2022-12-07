@@ -1,5 +1,5 @@
 <template>
-  <div :class="getTheme()">
+  <div :class="theme === 'theme--light' ? 'theme--light' : 'theme--dark'">
     <nav class="nav-bar">
       <div>
         <img class="nav-img" src="./assets/media/icono.png" alt="logo" />
@@ -39,7 +39,7 @@
           </a>
         </div>
       </div>
-      <JcSwich id="page-style" v-model="isDarkMode" label="Go to dark" labelOff="Go to light" />
+      <button @click="cambiarT()">Cambiar Tema</button>
       <div class="grupo-2">
         <small>&copy; 2022 <b> Diaana82</b></small>
       </div>
@@ -47,14 +47,20 @@
   </div>
 </template>
 
-<script setup lang="ts">
-import { ref } from 'vue';
-
-const isDarkMode = ref(false);
-
-function getTheme() {
-  return isDarkMode.value ? 'theme--dark' : 'theme--light';
-}
+<script lang="ts">
+export default {
+  data() {
+    return {
+      theme: 'theme--light',
+    };
+  },
+  methods: {
+    cambiarT() {
+      // console.log(this.theme);
+      this.theme = this.theme === 'theme--dark' ? 'theme--light' : 'theme--dark';
+    },
+  },
+};
 </script>
 
 <style lang="scss">
