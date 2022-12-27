@@ -20,26 +20,26 @@
       <div class="main-footer__social-media">
         <div class="linkedin">
           <a href="https://www.linkedin.com/in/diana-cristina-pati%C3%B1o-ramirez-172340243/">
-          <iconify-icon style="color:#fff" icon="akar-icons:linkedin-v1-fill">|</iconify-icon>
+          <iconify-icon style="color:#000" icon="akar-icons:linkedin-v1-fill">|</iconify-icon>
           </a>
         </div>
         <div class="github">
           <a href="https://github.com/Diaana82">
-          <iconify-icon style="color:#fff" icon="ant-design:github-outlined">|</iconify-icon>
+          <iconify-icon style="color:#000" icon="ant-design:github-outlined">|</iconify-icon>
           </a>
         </div>
         <div class="whatsapp">
           <a href="tel:+57 3135374647">
-          <iconify-icon style="color:#fff" icon="simple-icons:whatsapp">|</iconify-icon>
+          <iconify-icon style="color:#000" icon="simple-icons:whatsapp">|</iconify-icon>
           </a>
         </div>
         <div class="instagram">
-          <a style="color:#fff" href="https://www.instagram.com/dianacristina_pati/">
+          <a style="color:#000" href="https://www.instagram.com/dianacristina_pati/">
           <iconify-icon icon="ri:instagram-fill">.</iconify-icon>
           </a>
         </div>
       </div>
-      <button @click="cambiarT()">Cambiar Tema</button>
+      <button class="boton" @click="cambiarT()">Cambiar Tema</button>
       <div class="grupo-2">
         <small>&copy; 2022 <b> Diaana82</b></small>
       </div>
@@ -89,10 +89,10 @@ export default {
 }
 //Footer
 footer {
-  background-color: var(--color-background-1);
+  background-color: var(--color-background-2);
   justify-content: center;
   text-align: center;
-  color: var(--color-text-2);
+  color: var(color-text-2);
   padding: 3%;
 }
 .footer-img{
@@ -119,5 +119,11 @@ footer {
 }
 .instagram{
   font-size: 30px;
+}
+.boton{
+  background-color: #000;
+  border: none;
+  padding: 1%;
+  color: #fff;
 }
 </style>

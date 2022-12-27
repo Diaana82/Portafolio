@@ -99,6 +99,7 @@ export default defineComponent({
   text-align: center;
   margin-left: 5%;
   margin-right: 5%;
+  color: var(--color-text-2)
 }
 .info-title{
   padding: 5%;
